@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isaac Randomizer</title>
+    <link rel="icon" href="imgs/character_heads/isaac.png">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="text-center">Isaac Random Run Generator</h1>
+
+        <div class="row">
+            <div class="col-6 text-center" id="output">Output</div>
+            <div class="col-6 text-center">
+                <form action="#" onsubmit="generate(); return false;">
+                    <div class="col-12 text-center">
+                        <div class="card bg-light border-secondary">
+                            <div class="card-header">Characters</div>
+                            <div class="card-body">
+                                <div class="form-check" id="characters">
+                                    <div class="row">
+                                        <div class="col-6" id="regular" style="text-align:left;">
+                                            <h4 class="card-subtitle">Normal</h4>
+                                            <label class="form-check-label" for="isaac"><img src="imgs/character_heads/isaac.png"></label>
+                                            <input class="form-check-input" type="checkbox" id="isaac" checked>
+                                            <label class="form-check-label" for="isaac">
+                                                Isaac
+                                            </label><br>
+                                            <label class="form-check-label" for="maggy"><img src="imgs/character_heads/maggy.png" width=30></label>
+                                            <input class="form-check-input" type="checkbox" id="maggy" checked>
+                                            <label class="form-check-label" for="maggy">
+                                                Maggy
+                                            </label><br>
+                                            <label class="form-check-label" for="cain"><img src="imgs/character_heads/cain.png"></label>
+                                            <input class="form-check-input" type="checkbox" id="cain" checked>
+                                            <label class="form-check-label" for="cain">
+                                                Cain
+                                            </label><br>
+                                            <label class="form-check-label" for="judas"><img src="imgs/character_heads/judas.png"></label>
+                                            <input class="form-check-input" type="checkbox" id="judas" checked>
+                                            <label class="form-check-label" for="judas">
+                                                Judas
+                                            </label><br>
+                                            <img src="imgs/character_heads/blue baby.png">
+                                            <input class="form-check-input" type="checkbox" id="???" checked>
+                                            <label class="form-check-label" for="???">
+                                                Blue Baby
+                                            </label><br>
+                                            <img src="imgs/character_heads/eve.png">
+                                            <input class="form-check-input" type="checkbox" id="eve" checked>
+                                            <label class="form-check-label" for="eve">
+                                                Eve
+                                            </label><br>
+                                            <img src="imgs/character_heads/samson.png">
+                                            <input class="form-check-input" type="checkbox" id="samson" checked>
+                                            <label class="form-check-label" for="samson">
+                                                Samson
+                                            </label><br>
+                                            <img src="imgs/character_heads/azazel.png">
+                                            <input class="form-check-input" type="checkbox" id="azazel" checked>
+                                            <label class="form-check-label" for="azazel">
+                                                Azazel
+                                            </label><br>
+                                            <img src="imgs/character_heads/lazarus.png">
+                                            <input class="form-check-input" type="checkbox" id="lazarus" checked>
+                                            <label class="form-check-label" for="lazarus">
+                                                Lazarus
+                                            </label><br>
+                                            <img src="imgs/character_heads/eden.png">
+                                            <input class="form-check-input" type="checkbox" id="eden" checked>
+                                            <label class="form-check-label" for="eden">
+                                                Eden
+                                            </label><br>
+                                            <img src="imgs/character_heads/the lost.png">
+                                            <input class="form-check-input" type="checkbox" id="lost" checked>
+                                            <label class="form-check-label" for="lost">
+                                                The Lost
+                                            </label><br>
+                                            <img src="imgs/character_heads/lilith.png">
+                                            <input class="form-check-input" type="checkbox" id="lilith" checked>
+                                            <label class="form-check-label" for="lilith">
+                                                Lilith
+                                            </label><br>
+                                            <img src="imgs/character_heads/keeper.png">
+                                            <input class="form-check-input" type="checkbox" id="keeper" checked>
+                                            <label class="form-check-label" for="keeper">
+                                                Keeper
+                                            </label><br>
+                                            <img src="imgs/character_heads/apollyon.png">
+                                            <input class="form-check-input" type="checkbox" id="apollyon" checked>
+                                            <label class="form-check-label" for="apollyon">
+                                                Apollyon
+                                            </label><br>
+                                            <img src="imgs/character_heads/the forgotten.png">
+                                            <input class="form-check-input" type="checkbox" id="forgotten" checked>
+                                            <label class="form-check-label" for="forgotten">
+                                                The Forgotten
+                                            </label><br>
+                                            <img src="imgs/character_heads/bethany.png">
+                                            <input class="form-check-input" type="checkbox" id="bethany" checked>
+                                            <label class="form-check-label" for="bethany">
+                                                Bethany
+                                            </label><br>
+                                            <img src="imgs/character_heads/jacob and esau.png">
+                                            <input class="form-check-input" type="checkbox" id="jae" checked>
+                                            <label class="form-check-label" for="jae">
+                                                Jacob and Esau
+                                            </label>
+                                        </div>
+                                        <div class="col-6" style="text-align:left;" id="tainted">
+                                            <h4 class="card-subtitle">Tainted</h4>
+                                            <input class="form-check-input" type="checkbox" id="t_isaac" checked>
+                                            <label class="form-check-label" for="t_isaac">
+                                                Tainted Isaac
+                                            </label><br>
+                                            <input class="form-check-input" type="checkbox" id="t_maggy" checked>
+                                            <label class="form-check-label" for="t_maggy">
+                                                Tainted Maggy
+                                            </label><br>
+                                            <input class="form-check-input" type="checkbox" id="t_cain" checked>
+                                            <label class="form-check-label" for="t_cain">
+                                                Tainted Cain
+                                            </label><br>
+                                            <input class="form-check-input" type="checkbox" id="t_judas" checked>
+                                            <label class="form-check-label" for="t_judas">
+                                                Tainted Judas
+                                            </label><br>
+                                            <input class="form-check-input" type="checkbox" id="t_???" checked>
+                                            <label class="form-check-label" for="t_???">
+                                                Tainted Blue Baby
+                                            </label><br>
+                                            <input class="form-check-input" type="checkbox" id="t_eve" checked>
+                                            <label class="form-check-label" for="t_eve">
+                                                Tainted Eve
+                                            </label><br>
+                                            <input class="form-check-input" type="checkbox" id="t_samson" checked>
+                                            <label class="form-check-label" for="t_samson">
+                                                Tainted Samson
+                                            </label><br>
+                                            <input class="form-check-input" type="checkbox" id="t_azazel" checked>
+                                            <label class="form-check-label" for="t_azazel">
+                                                Tainted Azazel
+                                            </label><br>
+                                            <input class="form-check-input" type="checkbox" id="t_lazarus" checked>
+                                            <label class="form-check-label" for="t_lazarus">
+                                                Tainted Lazarus
+                                            </label><br>
+                                            <input class="form-check-input" type="checkbox" id="t_eden" checked>
+                                            <label class="form-check-label" for="t_eden">
+                                                Tainted Eden
+                                            </label><br>
+                                            <input class="form-check-input" type="checkbox" id="t_lost" checked>
+                                            <label class="form-check-label" for="t_lost">
+                                                Tainted Lost
+                                            </label><br>
+                                            <input class="form-check-input" type="checkbox" id="t_lilith" checked>
+                                            <label class="form-check-label" for="t_lilith">
+                                                Tainted Lilith
+                                            </label><br>
+                                            <input class="form-check-input" type="checkbox" id="t_keeper" checked>
+                                            <label class="form-check-label" for="t_keeper">
+                                                Tainted Keeper
+                                            </label><br>
+                                            <input class="form-check-input" type="checkbox" id="t_apollyon" checked>
+                                            <label class="form-check-label" for="t_apollyon">
+                                                Tainted Apollyon
+                                            </label><br>
+                                            <input class="form-check-input" type="checkbox" id="t_forgotten" checked>
+                                            <label class="form-check-label" for="t_forgotten">
+                                                Tainted Forgotten
+                                            </label><br>
+                                            <input class="form-check-input" type="checkbox" id="t_bethany" checked>
+                                            <label class="form-check-label" for="t_bethany">
+                                                Tainted Bethany
+                                            </label><br>
+                                            <input class="form-check-input" type="checkbox" id="t_jacob" checked>
+                                            <label class="form-check-label" for="t_jacob">
+                                                Tainted Jacob
+                                            </label><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="col-12 text-center">
+                        <div class="form-check" id="endings">
+                            <h3>Ending Location</h3>
+                            <div class="col-md-12 text-left" id="regular">
+                                <label class="form-check-label" for="any"><img width=30 src="imgs/ending_notes/any.webp"></label>
+                                <input class="form-check-input" type="checkbox" id="any" checked>
+                                <label class="form-check-label" for="any">
+                                    Any
+                                </label><br>
+                                <label class="form-check-label" for="chest"><img width=30 src="imgs/ending_notes/the chest.webp"></label>
+                                <input class="form-check-input" type="checkbox" id="chest" checked>
+                                <label class="form-check-label" for="chest">
+                                    The Chest
+                                </label><br>
+                                <label class="form-check-label" for="dark_room"><img width=30 src="imgs/ending_notes/the dark room.webp"></label>
+                                <input class="form-check-input" type="checkbox" id="dark_room" checked>
+                                <label class="form-check-label" for="dark_room">
+                                    The Dark Room
+                                </label><br>
+                                <label class="form-check-label" for="corpse"><img width=30 src="imgs/ending_notes/the corpse.webp"></label>
+                                <input class="form-check-input" type="checkbox" id="corpse" checked>
+                                <label class="form-check-label" for="corpse">
+                                    The Corpse
+                                </label><br>
+                                <label class="form-check-label" for="home"><img width=30 src="imgs/ending_notes/home.webp"></label>
+                                <input class="form-check-input" type="checkbox" id="home" checked>
+                                <label class="form-check-label" for="home">
+                                    Home
+                                </label><br>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Generate</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/generator.js"></script>
+</html>
