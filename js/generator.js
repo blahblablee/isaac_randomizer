@@ -7,9 +7,15 @@ function generate() {
     var characterImage = "imgs/character_heads/" + character.toLowerCase().trim() + ".png";
     var ending = selectedEndings[Math.floor(Math.random()*selectedEndings.length)];
     var endingImage = "imgs/ending_notes/" + ending.toLowerCase().trim() + ".webp";
+
+
     $("#output").html( "<img id='selectedCharacter'>" + character + " to " + ending + "<img height='25' id='selectedEnding'>");
     $("#output img").attr("src", characterImage);
-    $("#output #selectedEnding").attr("src", endingImage)
+    if (character.includes("Tainted")){
+        $("#output img:first").css('filter', 'invert(100%)');
+    }
+    $("#output #selectedEnding").attr("src", endingImage);
+
 }
 
 function createSelectionSets() {
