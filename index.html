@@ -15,7 +15,15 @@
         <h1 class="text-center">Isaac Random Run Generator</h1>
 
         <div class="row">
-            <div class="col-6 text-center" id="output">Output</div>
+            <div class="col-6 text-center">
+                <div class="card bg-light border-secondary">
+                    <div class="card-header"><h3>Results</h3></div>
+                    <div class="card-body">
+                        <span id="output">Make selections and then press generate.</span>
+                    </div>
+                </div>
+            </div>
+
             <div class="col-6 text-center">
                 <form action="#" onsubmit="generate(); return false;">
                     <div class="col-12 text-center">
@@ -188,6 +196,7 @@
                             </div>
                         </div>
                     </div><br>
+                    
                     <div class="col-12 text-center">
                         <div class="card bg-light border-secondary">
                             <div class="card-header"><h3>Ending Location</h3></div>
@@ -225,7 +234,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div><br>
                     <button type="submit" class="btn btn-primary">Generate</button>
                 </form>
             </div>
