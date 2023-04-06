@@ -11,9 +11,6 @@ function generate() {
 
     $("#output").html( "<img id='selectedCharacter'>" + character + " to " + ending + "<img height='25' id='selectedEnding'>");
     $("#output img").attr("src", characterImage);
-    if (character.includes("Tainted")){
-        $("#output img:first").css('filter', 'invert(100%)');
-    }
     $("#output #selectedEnding").attr("src", endingImage);
 
 }
